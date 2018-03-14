@@ -11,6 +11,10 @@
 
 require 'rails_helper'
 
-RSpec.describe Author, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe "Author" do
+  it "has a name" do
+    name = "john"
+    author = Author.create(name: name)
+    expect(author.name).to eq("john")
+  end
 end
